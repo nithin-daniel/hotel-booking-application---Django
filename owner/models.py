@@ -35,7 +35,7 @@ class Rooms(models.Model):
     wifi = models.BooleanField(default=True)
     tv = models.BooleanField(default=True)
     food = models.BooleanField(default=True)
-    image = models.ImageField(upload_to='room_photos')
+    image = models.ImageField(upload_to='room_photos/',null=True)
     class Meta: 
         verbose_name = "Rooms"
         verbose_name_plural = "Rooms"
