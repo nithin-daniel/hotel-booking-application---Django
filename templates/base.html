@@ -17,7 +17,7 @@ Author URL: http://w3layouts.com
     rel="stylesheet">
   <!-- google fonts -->
   <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
   <!-- Template CSS -->
 </head>
 {% block content %}
@@ -25,14 +25,14 @@ Author URL: http://w3layouts.com
 {% endblock content %}
 
  <!-- Template JavaScript -->
- <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
- <script src="{% static 'assets/js/theme-change.js' %}"></script>
+ <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+ <script src="{% static 'js/theme-change.js' %}"></script>
  <!--/slider-js-->
- <script src="{% static 'assets/js/jquery.min.js' %}"></script>
- <script src="{% static 'assets/js/modernizr-2.6.2.min.js' %}"></script>
- <script src="{% static 'assets/js/jquery.zoomslider.min.js' %}"></script>
+ <script src="{% static 'js/jquery.min.js' %}"></script>
+ <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+ <script src="{% static 'js/jquery.zoomslider.min.js' %}"></script>
  <!--//slider-js-->
- <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+ <script src="{% static 'js/owl.carousel.js' %}"></script>
  <!-- script for tesimonials carousel slider -->
  <script>
    $(document).ready(function () {
@@ -61,8 +61,8 @@ Author URL: http://w3layouts.com
  </script>
  <!-- //script for tesimonials carousel slider -->
  <!-- stats number counter-->
- <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
- <script src="{% static 'assets/js/jquery.countup.js' %}"></script>
+ <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+ <script src="{% static 'js/jquery.countup.js' %}"></script>
  <script>
    $('.counter').countUp();
  </script>
@@ -97,4 +97,4 @@ Author URL: http://w3layouts.com
  </script>
  <!--//MENU-JS-->
 
- <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+ <script src="{% static 'js/bootstrap.min.js' %}"></script>

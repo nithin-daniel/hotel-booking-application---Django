@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
- {% load static %}
- {% include 'includes/navbar.html' %}
+{% load static %}
 
  {% block content %}
+ {% include 'includes/navbar.html' %}
     <!--banner-slider-->
     <!-- main-slider -->
     <section class="w3l-main-slider" id="home">
         <div class="banner-content">
         <div id="demo-1"
-            data-zs-src='["assets/images/banner1.jpg", "assets/images/banner2.jpg","assets/images/banner3.jpg", "assets/images/banner4.jpg"]'
+            data-zs-src='{% static '["images/banner1.jpg", "images/banner2.jpg","images/banner3.jpg", "images/banner4.jpg"]' %}'
             data-zs-overlay="dots">
             <div class="demo-inner-content">
             <div class="container">
