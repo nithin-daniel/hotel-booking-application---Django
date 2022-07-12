@@ -8,7 +8,7 @@
     <section class="w3l-main-slider" id="home">
         <div class="banner-content">
         <div id="demo-1"
-            data-zs-src='{% static '["images/banner1.jpg", "images/banner2.jpg","images/banner3.jpg", "images/banner4.jpg"]' %}'
+            data-zs-src="{% static 'images/banner1.jpg' %}, {% static 'images/banner2.jpg' %},{% static 'images/banner3.jpg' %}, {% static '"images/banner4.jpg"' %}'"
             data-zs-overlay="dots">
             <div class="demo-inner-content">
             <div class="container">
@@ -65,7 +65,7 @@
                 <a href="#" class="card_title p-lg-4d-block">
                 <div class="row align-items-center">
                     <div class="col-sm-5 subject-img">
-                    <img src="assets/images/g1.jpg" class="img-fluid" alt="">
+                    <img src="{% static 'images/g1.jpg' %}" class="img-fluid" alt="">
                     </div>
                     <div class="col-sm-7 subject-content mt-sm-0 mt-4">
                     <h4>Paris</h4>
@@ -85,7 +85,7 @@
                 <a href="#" class="card_title p-lg-4d-block">
                 <div class="row align-items-center">
                     <div class="col-sm-5 subject-img">
-                    <img src="assets/images/g2.jpg" class="img-fluid" alt="">
+                    <img src="{% static 'images/g2.jpg' %}" class="img-fluid" alt="">
                     </div>
                     <div class="col-sm-7 subject-content mt-sm-0 mt-4">
                     <h4>Bankok</h4>
@@ -380,7 +380,7 @@
                         amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
                     </blockquote>
                     <div class="testi-des">
-                        <div class="test-img"><img src="assets/images/c1.jpg" class="img-fluid" alt="client-img">
+                        <div class="test-img"><img src="{% static 'images/c1.jpg' %}" class="img-fluid" alt="client-img">
                         </div>
                         <div class="peopl align-self">
                         <h3>Rohit Paul</h3>
@@ -400,7 +400,7 @@
                         amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
                     </blockquote>
                     <div class="testi-des">
-                        <div class="test-img"><img src="assets/images/c2.jpg" class="img-fluid" alt="client-img">
+                        <div class="test-img"><img src="{% static 'images/c2.jpg' %}" class="img-fluid" alt="client-img">
                         </div>
                         <div class="peopl align-self">
                         <h3>Shveta</h3>
@@ -420,7 +420,7 @@
                         amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
                     </blockquote>
                     <div class="testi-des">
-                        <div class="test-img"><img src="assets/images/c3.jpg" class="img-fluid" alt="client-img">
+                        <div class="test-img"><img src="{% static 'images/c3.jpg' %}" class="img-fluid" alt="client-img">
                         </div>
                         <div class="peopl align-self">
                         <h3>Roy Linderson</h3>
@@ -440,7 +440,7 @@
                         amet adipisicing elit. Laborum dolor facere ipsum adipisicingelit.
                     </blockquote>
                     <div class="testi-des">
-                        <div class="test-img"><img src="assets/images/c4.jpg" class="img-fluid" alt="client-img">
+                        <div class="test-img"><img src="{% static 'images/c4.jpg' %}" class="img-fluid" alt="client-img">
                         </div>
                         <div class="peopl align-self">
                         <h3>Mike Thyson</h3>
