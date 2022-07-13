@@ -44,3 +44,8 @@ class Rooms(models.Model):
         return self.room_name
 class Banner(models.Model):
     image = models.ImageField(upload_to='banner/')
+
+    def __str__(self):
+        return self.image
+   
+    
