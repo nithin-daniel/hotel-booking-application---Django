@@ -21,6 +21,7 @@
                         <h6 class="mb-3">Discover your next adventure</h6>
                         <div class="flex-wrap search-wthree-field mt-md-5 mt-4">
                             <form action="#" method="post" class="booking-form">
+                                {% csrf_token %}
                             <div class="row book-form">
                                 <div class="form-input col-md-4 mt-md-0 mt-3">
 
@@ -33,15 +34,17 @@
                                     <option value="europe">Europe</option>
                                     <option value="south-america">South America</option>
                                 </select> -->
-                                <input type="text" value="" placeholder="Enter your place">
+                                    <input type="text" value="" placeholder="Enter your place">
                                 </div>
                                 <div class="form-input col-md-4 mt-md-0 mt-3">
-
-                                <input type="date" name="" placeholder="Date" required="">
+                                    <input type="date" name="" placeholder="Check In" required="">
                                 </div>
-                                <div class="bottom-btn col-md-4 mt-md-0 mt-3">
-                                <button class="btn btn-style btn-secondary"><span class="fa fa-search mr-3"
-                                    aria-hidden="true"></span> Search</button>
+                                <div class="form-input col-md-4 mt-md-0 mt-3">
+                                    <input type="date" name="" placeholder="Check Out " required="">
+                                </div>
+                                <div class="bottom-btn col-md-4 mt-1 md-0 mt-3">
+                                <a class="btn btn-style btn-secondary" href="#rooms" ><span class="fa fa-search mr-3"
+                                    aria-hidden="true"></span> Search</a>
                                 </div>
                             </div>
                             </form>
@@ -59,8 +62,8 @@
     <section class="w3l-grids-3 py-5">
         <div class="container py-md-5">
         <div class="title-content text-left mb-lg-5 mb-4">
-            <h6 class="sub-title">Visit</h6>
-            <h3 class="hny-title">Popular Destinations</h3>
+            <!-- <h6 class="sub-title">Visit</h6> -->
+            <h3 class="hny-title" id="rooms" >Rooms Available</h3>
         </div>
         <div class="row bottom-ab-grids">
     <!--/row-grids-->
