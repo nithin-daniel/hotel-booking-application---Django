@@ -1,92 +1,105 @@
-<header id="site-header" class="fixed-top">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg stroke">
-        <h1><a class="navbar-brand mr-lg-5" href="{% url 'index' %}">
-            Hotel Booking Application
-          </a></h1>
-        <!-- if logo is image enable this   
-      <a class="navbar-brand" href="#index.html">
-          <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-      </a> -->
-        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-          </span>
-        </button>
+<div class="section">
+  <header id="site-header" class="fixed-top">
+      <div class="container mb-3" style="width: 100%; height: 3rem;">
+        <nav class="navbar navbar-expand-lg stroke">
+          <h1><a class="navbar-brand mr-lg-5" href="{% url 'index' %}">
+              Hotel Booking Application
+            </a></h1>
+          <!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Destinations</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Destinations</a>
+              </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
 
+            </ul>
+          </div>
+          {% if  request.user.is_authenticated %}
+          <ul class="navbar-nav mr-auto collapse navbar-collapse">
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="{% url 'logout' %}">Logout</a> -->
+            </li>
+          {% else %}
+          <ul class="navbar-nav mr-auto collapse navbar-collapse">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </li>
           </ul>
-        </div>
-        {% if  request.user.is_authenticated %}
-        <ul class="navbar-nav mr-auto collapse navbar-collapse">
-          <li class="nav-item">
-            <!-- <a class="nav-link" href="{% url 'logout' %}">Logout</a> -->
-          </li>
-        {% else %}
-        <ul class="navbar-nav mr-auto collapse navbar-collapse">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'register' %}">Register</a>
-          </li>
-        </ul>
-        {% endif %}
+          {% endif %}
 
-        {% if  request.user.is_authenticated %}
-        <div class="d-lg-block d-none">
-          {% comment %} <a href="contact.html" class="btn btn-style btn-secondary">Name</a> {% endcomment %}
-          <div class="container">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ current_user }}
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="">My Profile</a>
-                <a class="dropdown-item" href="">My Rooms </a>
-                <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-              </div>
+          {% if  request.user.is_authenticated %}
+          <div class="d-lg-block d-none">
+            {% comment %} <a href="contact.html" class="btn btn-style btn-secondary">Name</a> {% endcomment %}
+            <div class="container">
+              <!-- <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ current_user }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                  <a class="dropdown-item" href="">My Rooms </a>
+                  <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                </div>
+              </div> -->
+
+              <li class="nav-item dropdown">
+                
+                <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ current_user }}<div class=""><i class="fa fa-chevron-down pull-right"></i></div></a>
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                  <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                  <a class="dropdown-item" href="{% url 'my_rooms' %}">My Rooms </a>
+                  <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                </ul>
+            </li>
             </div>
           </div>
-        </div>
-        {% else %}
-        <div class="d-lg-block d-none">
-          <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
-        </div>
-        {% endif %}
-        <!-- toggle switch for light and dark theme -->
-        <div class="mobile-position">
-          <nav class="navigation">
-            <div class="theme-switch-wrapper">
-              <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox">
-                <div class="mode-container">
-                  <i class="gg-sun"></i>
-                  <i class="gg-moon"></i>
-                </div>
-              </label>
-            </div>
-          </nav>
-        </div>
-        <!-- //toggle switch for light and dark theme -->
-      </nav>
-    </div>
-  </header>
-  <!-- //header -->
+          {% else %}
+          <div class="d-lg-block d-none">
+            <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
+          </div>
+          {% endif %}
+          <!-- toggle switch for light and dark theme -->
+          <div class="mobile-position">
+            <nav class="navigation">
+              <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox">
+                  <div class="mode-container">
+                    <i class="gg-sun"></i>
+                    <i class="gg-moon"></i>
+                  </div>
+                </label>
+              </div>
+            </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+  </div>
