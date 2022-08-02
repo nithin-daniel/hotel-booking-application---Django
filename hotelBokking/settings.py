@@ -142,19 +142,40 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Base url to serve media files
-MEDIA_URL = '/media/'
+# # Base url to serve media files
+# MEDIA_URL = '/media/'
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
+
+# # Path where media is stored
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# LOGIN_REDIRECT_URL = '/'
+# LOGOUT_REDIRECT_URL = '/'
+
+
+# # Activate Django-Heroku.
+# django_heroku.settings(locals())
+
+
+django_heroku.settings(locals())
+
 STATIC_URL = 'static/'
+
+# Add Manually
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
 ]
 
-# Path where media is stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+if DEBUG:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.dummy.DummyCache'
+        }
+    }
