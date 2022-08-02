@@ -14,8 +14,7 @@ from pathlib import Path
 import django_heroku
 import psycopg2
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
 
 
@@ -149,3 +148,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
