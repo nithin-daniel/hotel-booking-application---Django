@@ -9,9 +9,9 @@
         <div class="banner-content">
         <div id="demo-1"
             
-             {% for i in banner %}
+             {% comment %} {% for i in banner %}
                 data-zs-src="{{ banner.image.url }}"
-            {% endfor %}
+            {% endfor %} {% endcomment %}
             
             data-zs-overlay="dots">
             <div class="demo-inner-content">
