@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from pathlib import Path
 import django_heroku
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['hotel-booking-app-django.herokuapp.com',
                  '192.168.43.21I'
-    ]
+                 ]
 
 
 # Application definition
@@ -81,16 +82,6 @@ WSGI_APPLICATION = 'hotelBokking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'hotel-booking-app-django',
-#         'USER': 'oniza',
-#         'PASSWORD': 'useradmin',
-#         'HOST': 'localhost',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -130,47 +121,39 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-STATIC_URL = 'static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-# # Base url to serve media files
-# MEDIA_URL = '/media/'
-# STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
-
-# # Path where media is stored
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# LOGIN_REDIRECT_URL = '/'
-# LOGOUT_REDIRECT_URL = '/'
-
-
-# # Activate Django-Heroku.
-# django_heroku.settings(locals())
-
-
-django_heroku.settings(locals())
-
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_URL = 'static/'
 
-# Add Manually
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / "static",
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+
+# Base url to serve media files
+
+MEDIA_URL = '/media/'
+
+
+# Path where media is stored
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+django_heroku.settings(locals())
+
 
 if DEBUG:
     CACHES = {
