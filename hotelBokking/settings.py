@@ -173,7 +173,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
@@ -191,11 +191,11 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-=======
+# =======
 if DEBUG:
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.dummy.DummyCache'
         }
     }
->>>>>>> acaccc58decf9121f277d67ba55efe1b2e984259
+# >>>>>>> acaccc58decf9121f277d67ba55efe1b2e984259
