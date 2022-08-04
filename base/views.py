@@ -11,7 +11,7 @@ def index(request):
         'banner': banner,
         'current_user': current_user,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'base/index.html', context)
 
 def account_profile(request):
     return render(request, 'owner/profile.html')

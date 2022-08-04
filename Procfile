@@ -1,1 +1,1 @@
-web: gunicorn hotelBokking.wsgi --log-file -
+web: gunicorn main.wsgi

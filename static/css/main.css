@@ -10893,7 +10893,7 @@ a.text-dark:focus {
   }
 
   abbr[title]::after {
-    content: " ("attr(title) ")";
+    content: " (" attr(title) ")";
   }
 
   pre {
@@ -11118,31 +11118,6 @@ a.text-dark:focus {
   100% {
     transform: rotate(359deg);
   }
-}
-
-.fa-rotate-90 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  transform: rotate(90deg);
-}
-
-.fa-rotate-180 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  transform: rotate(180deg);
-}
-
-.fa-rotate-270 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  transform: rotate(270deg);
-}
-
-.fa-flip-horizontal {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  transform: scale(-1, 1);
-}
-
-.fa-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  transform: scale(1, -1);
 }
 
 :root .fa-rotate-90,
@@ -15127,7 +15102,7 @@ nav ul li a:hover {
 @media (max-width:440px) {
   .demo-inner-content h3 {
     font-size: 38px;
-    line-height:46px;
+    line-height: 46px;
   }
 }
 
@@ -15191,7 +15166,6 @@ nav#breadcrumbs a {
 .owl-carousel .owl-stage {
   position: relative;
   touch-action: manipulation;
-  -moz-backface-visibility: hidden;
 }
 
 .owl-carousel .owl-stage:after {
@@ -15206,19 +15180,13 @@ nav#breadcrumbs a {
 .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .owl-carousel .owl-item,
-.owl-carousel .owl-wrapper {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-}
 
 .owl-carousel .owl-item {
   min-height: 1px;
   float: left;
-  -webkit-backface-visibility: hidden;
   -webkit-touch-callout: none;
 }
 
@@ -15369,7 +15337,6 @@ nav#breadcrumbs a {
   background: url(owl.video.play.png) no-repeat;
   cursor: pointer;
   z-index: 1;
-  -webkit-backface-visibility: hidden;
   transition: transform .1s ease;
 }
 
@@ -15489,7 +15456,6 @@ nav#breadcrumbs a {
   margin: 5px 2px;
   background: var(--font-color);
   display: block;
-  -webkit-backface-visibility: visible;
   transition: opacity .2s ease;
   border-radius: 50%;
   position: relative;
@@ -16115,7 +16081,6 @@ a.read span {
   margin: 5px 2px;
   background: #d8d8d8;
   display: block;
-  -webkit-backface-visibility: visible;
   transition: opacity .2s ease;
   border-radius: 50%;
   position: relative;
